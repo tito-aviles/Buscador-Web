@@ -1,0 +1,235 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif; /* Fuente elegante y profesional */
+    color: #2c3e50; /* Azul oscuro para un tono serio */
+}
+
+/* Fondo limpio */
+body {
+    background-image: url(buscador4.jpg);
+    background-size: cover;
+    color: #ecf0f1; /* Texto claro para contraste */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Barra de marcadores estilo Chrome */
+.bookmark-bar {
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.bookmark-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.bookmark-bar li {
+    margin: 0;
+}
+
+.bookmark-bar a {
+    color: #2980b9; /* Azul profesional */
+    text-decoration: none;
+    font-size: 1rem; /* Tamaño estándar para legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.bookmark-bar a:hover {
+    background: #d6d6d6;
+    color: #1a5276; /* Azul más oscuro al pasar el cursor */
+    text-decoration: underline;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Visible en pantallas pequeñas */
+    }
+
+    .bookmark-bar ul {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(224, 224, 224, 0.95);
+        padding: 10px 0;
+    }
+
+    .bookmark-bar ul.show {
+        display: flex; /* Mostrar cuando se active */
+    }
+
+    .bookmark-bar li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.8rem; /* Más grande para destacar */
+    font-weight: 700; /* Negrita para mayor impacto */
+    color: wheat; /* Azul más oscuro para profesionalismo */
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Letras mayúsculas para énfasis */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: wheat; /* Color claro para contraste */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Capitalizar palabras */
+    font-family: 'Playfair Display', serif;
+    text-align: center; /* Centrar el texto */
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Reducir tamaño en pantallas pequeñas */
+        margin: 20px 10px; /* Ajustar márgenes */
+    }
+}
+
+/* Ajustar el texto general */
+p, li, a {
+    font-size: 1rem; /* Tamaño estándar para legibilidad */
+    line-height: 1.6; /* Espaciado entre líneas para mayor claridad */
+    color: #2c3e50; /* Azul oscuro para un tono serio */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Barra de búsqueda */
+#searchBar {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem; /* Tamaño ligeramente mayor */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna para formularios */
+    color: #34495e; /* Azul grisáceo */
+    border: 1px solid #bdc3c7; /* Gris claro para un borde limpio */
+    border-radius: 6px; /* Bordes más redondeados */
+    outline: none;
+    background: white;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#searchBar:focus {
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.5); /* Azul profesional */
+    border-color: #2980b9; /* Azul más vibrante */
+}
+
+/* Botón de búsqueda estilo Chrome */
+#searchButton {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #2980b9; /* Azul profesional */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#searchButton:hover {
+    background: #1a5276; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+#searchButton:active {
+    background: #154360; /* Azul aún más oscuro */
+    transform: scale(0.95);
+}
+
+/* Resultados */
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif; /* Fuente moderna para resultados */
+    font-size: 1rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    max-width: 600px;
+    width: 100%;
+}
+
+#results a {
+    color: #2980b9;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#results a:hover {
+    color: #1a5276;
+    text-decoration: underline;
+}
+
+#results p {
+    color: white; /* Rojo más sobrio para errores */
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* Footer estilo Chrome */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #e0e0e0;
+    color: #7f8c8d; /* Gris profesional */
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #d6d6d6;
+}

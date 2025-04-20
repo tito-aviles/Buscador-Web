@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Web</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra de Marcadores con Menú -->
+  <nav class="bookmark-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="bookmarkList">
+      <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+      <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+      <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>ExploraWeb</h1>
+    <input type="text" id="searchBar" placeholder="Buscar..." autocomplete="off">
+    <button id="searchButton">Buscar</button>
+    <div id="results"></div>
+  </div>
+
+  <h2>EXPLORAWEB TU EXPLORADOR FAVORITO</h2>
+
+<footer>
+  <p>&copy; 2025 Gerardo López. Todos los derechos reservados</p>
+</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
